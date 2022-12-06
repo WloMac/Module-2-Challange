@@ -5,7 +5,7 @@
   --fontwhite: white; 
 }
 
-.main-header{
+.hero-banner{
   background-image: url("../images/logo.jpg");
   height: 400px;
   align-items: center;
@@ -16,7 +16,7 @@
 .nav{
   text-align: left;
   position: relative;
-  top: 300px;
+  top: 400px;
   /* Top: 1; doesn't work */
 }
 .nav a{
@@ -42,61 +42,99 @@ body{
 }
 
 .page-wrapper{
+  margin: 0px 5%;
   display: grid;
-  height: auto;
-  grid-template-columns: 1fr 3fr; 
-  
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-areas:
+  "about aboutdetails aboutdetails"
+  "work project1 project1"
+  "work project2 project3"
+  "contact contactdetails contactdetails" 
+    
 }
-#project1{
-  background-image: url("../images/02-portfolio-1.jpg");  
-  height: 300px;
-  width: 300px;
+#about{
+  grid-area: about;
 }
-
-/* .portfolio-cointainer{
-  display: grid;
-  height: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "work workdesc1 workdesc1"
-  "work workdesc2 workdesc3";
+#aboutdetails{
+  grid-area: aboutdetails;
 }
-
 #work{
   grid-area: work;
 }
 
-#workdesc1{
-  grid-area: workdesc1;
-  background-image: url("../images/02-portfolio-1.jpg");
+#project1{
+  grid-area: project1;
+  background-image: url("../images/02-portfolio-1.jpg");  
+  
 }
-
-#workdesc2{
-  grid-area: workdesc2;
+#project2{
+  grid-area: project2;
   background-image: url("../images/02-portfolio-2.jpg");
 }
 
-#workdesc3{
-  grid-area: workdesc3;
+#project3{
+  grid-area: project3;
   background-image: url("../images/02-portfolio-3.jpg");
-} */
+}
 
+#contact{
+  grid-area: contact;
+}
+
+#contactdetails{
+  grid-area: contactdetails;
+}
+
+
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+h1,h2,h3{
+  text-align: left;
+
+}
 h3{
   background-color: hsla(0, 0%, 0%, 0.438);
-  text-align: center;
-  top: -1;
+  justify-content: end;
 }
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  }
+  h4,h5,h6 {
+  text-align: center;
+}
 
 p {
   margin: 0;
 }
 
+a{
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--fontwhite);
+  
+}
+
 .page-section{
-  text-align: center;
-  margin: 40px auto 30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  align-content: center; 
+  margin: 10px;
   }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+  footer{
+    background-color: rgba(0, 0, 0, 0.579);
+  }
+
+
 
   @media only screen and (max-width: 500px){
   .page-wrapper{
