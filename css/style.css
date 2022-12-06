@@ -10,10 +10,16 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  background-image: linear-gradient(180deg, rgb(123, 200, 255), rgb(41, 131, 194));
+  background-image: linear-gradient(180deg, rgb(137, 139, 141), rgb(50, 50, 50));
   color: var(--fontwhite);
 
 }
+
+.main-header{
+  background-image: url("images/logo.jpg");
+  background-size: cover;
+}
+
 .myphoto{
   float: left;
   height: 75px;
